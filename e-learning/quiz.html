@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+.quiz-container {
+    width: 50%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    margin-top: 50px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:disabled {
+    background-color: #d3d3d3;
+    cursor: not-allowed;
+}
+
+#certificateBtn {
+    display: none;
+}
+    </style>
+</head>
+<body>
+    <div class="quiz-container">
+        <h1>Quiz</h1>
+        
+        <div id="quiz">
+            <p>Name : <input type="text"></p>
+            <p>Mobile No. : <input type="number"></p>
+            <p>Gmail : <input type="email"></p>
+        
+            <p>1. What does HTML stand for?</p>
+            <input type="radio" name="q1" value="0"> Hyper Text Markup Language<br>
+            <input type="radio" name="q1" value="0"> Home Tool Markup Language<br>
+            <input type="radio" name="q1" value="0"> Hyperlinks and Text Markup Language<br>
+            <input type="radio" name="q1" value="1"> Hyper Text Makeup Language<br><br>
+
+            <p>2. Which of the following is a JavaScript framework?</p>
+            <input type="radio" name="q2" value="1"> Flask<br>
+            <input type="radio" name="q2" value="0">  Laravel<br>
+            <input type="radio" name="q2" value="0"> Angular<br>
+            <input type="radio" name="q2" value="0"> Django<br><br>
+
+            <p>3. What is the primary purpose of CSS in web development?</p>
+            <input type="radio" name="q3" value="0"> Structuring web content<br>
+            <input type="radio" name="q3" value="0"> Adding interactivity to web pages<br>
+            <input type="radio" name="q3" value="1"> Styling web pages<br>
+            <input type="radio" name="q3" value="0"> Handling server-side logic<br>
+            <br>
+
+            <p>4. Which of the following is a valid HTML5 doctype declaration?</p>
+            <input type="radio" name="q3" value="0"> &lt;!DOCTYPE html5&gt;<br>
+            <input type="radio" name="q3" value="0"> &lt;!DOCTYPE HTML&gt;<br>
+            <input type="radio" name="q3" value="1"> &lt;!DOCTYPE html&gt;<br>
+            <input type="radio" name="q3" value="0"> &lt;!DOCTYPE document&gt;<br>
+            <br>
+
+            <p>5. Which of the following is a front-end technology?</p>
+            <input type="radio" name="q3" value="0"> Node.js<br>
+            <input type="radio" name="q3" value="1">  React<br>
+            <input type="radio" name="q3" value="0"> PHP<br>
+            <input type="radio" name="q3" value="0">  MySQL<br>
+            <br>
+
+            <p>6. What does the term "responsive design" refer to in web development?</p>
+            <input type="radio" name="q3" value="0">  Designing websites that respond to user input<br>
+            <input type="radio" name="q3" value="1">  Creating websites that work on various devices and screen sizes<br>
+            <input type="radio" name="q3" value="0"> Websites that load faster on mobile devices<br>
+            <input type="radio" name="q3" value="0">  Websites that automatically refresh data<br>
+            <br>
+
+            <p>7. In JavaScript, which method is used to find an element by its ID?</p>
+            <input type="radio" name="q3" value="0"> getElementByClassName()<br>
+            <input type="radio" name="q3" value="1">   getElementById()<br>
+            <input type="radio" name="q3" value="0">  getElementByTag()<br>
+            <input type="radio" name="q3" value="0">  querySelectorAll()<br>
+            <br>
+
+            <p>8. What is the purpose of the <head> element in HTML?</p>
+            <input type="radio" name="q3" value="0"> To store the visible content of the web page<br>
+            <input type="radio" name="q3" value="0">  To link external resources such as stylesheets and scripts<br>
+            <input type="radio" name="q3" value="0"> To display the title of the web page<br>
+            <input type="radio" name="q3" value="1"> Both b and c<br>
+            <br>
+
+            <p>9. Which CSS property is used to change the background color of an element?</p>
+            <input type="radio" name="q3" value="0"> color<br>
+            <input type="radio" name="q3" value="1">  background-color<br>
+            <input type="radio" name="q3" value="0"> border-color<br>
+            <input type="radio" name="q3" value="0">  background-image<br>
+            <br>
+
+            <p>10. What does AJAX stand for?</p>
+            <input type="radio" name="q3" value="1"> Asynchronous JavaScript and XML<br>
+            <input type="radio" name="q3" value="0">   Advanced JavaScript and XHTML<br>
+            <input type="radio" name="q3" value="0">  Asynchronous JSON and XML<br>
+            <input type="radio" name="q3" value="0">   Active JavaScript and XHTML<br>
+            <br>
+
+            
+            <button onclick="submitQuiz()">Submit Quiz</button>
+        </div>
+
+        <div id="result" style="display:none;">
+            <h2>Your Score: <span id="score"></span></h2>
+            <button id="certificateBtn" disabled>Get Certificate</button>
+        </div>
+    </div>
+
+
+    <script>
+        function submitQuiz() {
+    let totalQuestions = 3;
+    let score = 0;
+
+    // Get the user's answers
+    let q1 = document.querySelector('input[name="q1"]:checked');
+    let q2 = document.querySelector('input[name="q2"]:checked');
+    let q3 = document.querySelector('input[name="q3"]:checked');
+
+    // Calculate score
+    if (q1) score += parseInt(q1.value);
+    if (q2) score += parseInt(q2.value);
+    if (q3) score += parseInt(q3.value);
+
+    let percentage = (score / totalQuestions) * 100;
+
+    // Display result
+    document.getElementById("score").innerText = percentage + "%";
+    document.getElementById("result").style.display = "block";
+
+    // Activate certificate button if score > 75%
+    if (percentage > 75) {
+        let certificateBtn = document.getElementById("certificateBtn");
+        certificateBtn.disabled = false;
+        certificateBtn.style.display = "inline-block";
+        certificateBtn.onclick = function() {
+            alert("Congratulations! You can download your certificate.");
+        };
+    }
+}
+    </script>
+</body>
+</html>

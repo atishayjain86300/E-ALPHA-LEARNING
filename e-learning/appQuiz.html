@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+    <!-- App Devlopment quiz - section -->
+  <section id="appQuiz-section" class="hidden">
+    <div class="quiz-container">
+      <h1 style="background-color:#8EACCD ; text-align: center;">Quiz</h1>
+
+      <div id="quiz">
+        <div id="userInfo">
+          <p>Name : <input type="text"></p>
+         <p>Mobile No. : <input type="number"></p>
+         <p>Gmail : <input type="email"></p>
+         </div>
+      
+          <p>1.Which of the following is not a component of Android architecture?</p>
+          <input type="radio" name="q1" value="0">  Activity<br>
+          <input type="radio" name="q1" value="0">Service<br>
+          <input type="radio" name="q1" value="0"> Fragment<br>
+          <input type="radio" name="q1" value="1"> ViewModel<br><br>
+
+          <p>2. In iOS development, what does MVC stand for?</p>
+          <input type="radio" name="q2" value="1"> Model-View-Controller<br>
+          <input type="radio" name="q2" value="0"> Model-View-Command<br>
+          <input type="radio" name="q2" value="0"> Module-View-Component<br>
+          <input type="radio" name="q2" value="0"> Main-View-Controller<br><br>
+
+          <p>3. Which language is primarily used for developing iOS applications?</p>
+          <input type="radio" name="q3" value="0"> Java<br>
+          <input type="radio" name="q3" value="1"> Swift<br>
+          <input type="radio" name="q3" value="0">  Kotlin<br>
+          <input type="radio" name="q3" value="0">  C#<br>
+          <br>
+
+          <p>4. What is the purpose of RESTful APIs in app development?</p>
+          <input type="radio" name="q4" value="0"> To create a user interface<br>
+          <input type="radio" name="q4" value="0"> To manage local storage<br>
+          <input type="radio" name="q4" value="1"> To enable communication between different software components<br>
+          <input type="radio" name="q4" value="0">  To handle background processes<br>
+          <br>
+
+          <p>5. Which of the following is a key feature of the React Native framework?</p>
+          <input type="radio" name="q5" value="0"> Native performance on web applications<br>
+          <input type="radio" name="q5" value="1"> Cross-platform mobile development<br>
+          <input type="radio" name="q5" value="0"> Exclusive support for iOS apps<br>
+          <input type="radio" name="q5" value="0">   Built-in database management<br>
+          <br>
+
+          <p>6.What is the purpose of the Android Manifest file?</p>
+          <input type="radio" name="q6" value="0"> To define the user interface layout<br>
+          <input type="radio" name="q6" value="1"> To declare app permissions and components<br>
+          <input type="radio" name="q6" value="0"> To manage network connections<br>
+          <input type="radio" name="q6" value="0"> To handle app background tasks<br>
+          <br>
+
+          <p>7. Which tool is used for managing dependencies in a Flutter project?</p>
+          <input type="radio" name="q7" value="0"> Maven<br>
+          <input type="radio" name="q7" value="0"> Gradle<br>
+          <input type="radio" name="q7" value="1"> Pub<br>
+          <input type="radio" name="q7" value="0"> npm<br>
+          <br>
+
+          <p>8. In which file are Android app build configurations typically specified?</p>
+          <input type="radio" name="q8" value="0"> AndroidManifest.xml<br>
+          <input type="radio" name="q8" value="1"> build.gradle<br>
+          <input type="radio" name="q8" value="0"> settings.gradle<br>
+          <input type="radio" name="q8" value="0"> app.config<br>
+          <br>
+
+          <p>9. What does the acronym CRUD stand for in database management?</p>
+          <input type="radio" name="q9" value="1"> Create, Read, Update, Delete<br>
+          <input type="radio" name="q9" value="0"> Create, Run, Update, Delete<br>
+          <input type="radio" name="q9" value="0"> Connect, Read, Update, Delete<br>
+          <input type="radio" name="q9" value="0"> Create, Remove, Update, Delete<br>
+          <br>
+
+          <p>10. What is a 'View' in the context of the Model-View-Controller (MVC) design pattern?</p>
+          <input type="radio" name="q10" value="0"> The component responsible for managing application data<br>
+          <input type="radio" name="q10" value="0"> The component that handles user input<br>
+          <input type="radio" name="q10" value="1"> The component that displays data to the user<br>
+          <input type="radio" name="q10" value="0"> The component that controls the application flow<br>
+          <br>   
+      </div>
+ 
+      <button type="button" class="submitBtn"onclick="calculateScore()">Submit</button>
+    </form>
+    <p id="result"></p>
+    <a href="certificate.jpg">
+    <button id="certificate-button" class="certificateBtn" disabled onclick="showCertificate()">
+     Certificate</button></a>
+
+  </div>
+   </section>
+   <script src="script.js"></script>
+</body>
+</html>

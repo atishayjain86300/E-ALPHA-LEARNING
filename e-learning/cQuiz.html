@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+    <!-- c quiz section -->
+    <section id="cQuiz-section" class="hidden">
+        <div class="quiz-container">
+          <h1 style="background-color:#8EACCD ; text-align: center;">Quiz</h1>
+          
+          <div id="quiz">
+            <div id="quiz">
+              <div id="userInfo">
+              <p>Name : <input type="text"></p>
+             <p>Mobile No. : <input type="number"></p>
+             <p>Gmail : <input type="email"></p>
+             </div>
+          
+              <p>1.Which of the following is not a logical operator?</p>
+              <input type="radio" name="q1" value="0"> && <br>
+              <input type="radio" name="q1" value="0"> ! <br>
+              <input type="radio" name="q1" value="0"> || <br>
+              <input type="radio" name="q1" value="1">|<br><br>
+    
+              <p>2. In _______, the bodies of the two loops are merged together to form a single loop provided that they do not make any references to each other.</p>
+              <input type="radio" name="q2" value="0"> Loop concatenation<br>
+              <input type="radio" name="q2" value="0">Loop unrolling<br>
+              <input type="radio" name="q2" value="1"> 
+              Loop jamming<br>
+              <input type="radio" name="q2" value="0"> Strength reduction<br><br>
+    
+              <p>3. Which of the following operators can be applied on structure variables?</p>
+              <input type="radio" name="q3" value="0"> Equality comparison ( == )<br>
+              <input type="radio" name="q3" value="0"> Assignment ( = )<br>
+              <input type="radio" name="q3" value="1">  Both of the above<br>
+              <input type="radio" name="q3" value="0">  None of the above<br>
+              <br>
+    
+              <p>4. The translator which performs macro calls expansion is called: </p>
+              <input type="radio" name="q4" value="0"> Macro processor<br>
+              <input type="radio" name="q4" value="1"> Macro pre - processor<br>
+              <input type="radio" name="q4" value="0"> Micro pre - processor<br>
+              <input type="radio" name="q4" value="0">  
+              Dynamic Linker<br>
+              <br>
+    
+              <p>5. Which file is generated after pre-processing of a C program?</p>
+              <input type="radio" name="q5" value="1"> .i<br>
+              <input type="radio" name="q5" value="0"> .o<br>
+              <input type="radio" name="q5" value="0"> 
+              .p<br>
+              <input type="radio" name="q5" value="0">   
+              .m<br>
+              <br>
+    
+              <p>6.A one dimensional array A has indices 1....75. Each element is a string and takes up three memory words. The array is stored at location 1120 decimal. The starting address of A[49] is</p>
+              <input type="radio" name="q6" value="1"> 1264<br>
+              <input type="radio" name="q6" value="0"> 
+              1267<br>
+              <input type="radio" name="q6" value="0"> 1169<br>
+              <input type="radio" name="q6" value="0">
+              1164<br>
+              <br>
+    
+              <p>7. Which of the following is true about arrays in C?</p>
+              <input type="radio" name="q7" value="0"> When an array is passed to a function, C compiler creates a copy of array.<br>
+              <input type="radio" name="q7" value="0"> For every type T, there can be an array of T.<br>
+              <input type="radio" name="q7" value="1">
+              For every type T except void and function type, there can be an array of T.<br>
+              <input type="radio" name="q7" value="0"> 2D arrays are stored in column major form<br>
+              <br>
+    
+              <p>8. What does the following expression means ? 
+                char ∗(∗(∗ a[N]) ( )) ( );</p>
+              <input type="radio" name="q8" value="1"> an array of n pointers to function returning pointers to functions returning pointers to characters.<br>
+              <input type="radio" name="q8" value="0">
+              a function return array of N pointers to functions returning pointers to characters<br>
+              <input type="radio" name="q8" value="0"> an array of n pointers to function returning pointers to characters<br>
+              <input type="radio" name="q8" value="0"> a pointer to a function returning array of n pointers to function returning character pointers.<br>
+              <br>
+    
+              <p>9. The following statement in ‘C’ 
+                int (*f())[ ]; 
+                declares</p>
+              <input type="radio" name="q9" value="0"> a function returning an array of pointers to integers.<br>
+              <input type="radio" name="q9" value="1"> a function returning a pointer to an array of integers.<br>
+              <input type="radio" name="q9" value="0"> array of functions returning pointers to integers.<br>
+              <input type="radio" name="q9" value="0"> Can illegal statement.<br>
+              <br>
+    
+              <p>10. In C, parameters are always </p>
+              <input type="radio" name="q10" value="0"> Passed by value result<br>
+              <input type="radio" name="q10" value="0"> Passed by reference<br>
+              <input type="radio" name="q10" value="0"> Non-pointer variables are passed by value and pointers are passed by reference<br>
+              <input type="radio" name="q10" value="1"> Passed by value<br>
+              <br>
+          </div>
+          <button type="button" class="submitBtn"onclick="calculateScore()">Submit</button>
+    </form>
+    <p id="result"></p>
+    <a href="certificate.jpg">
+    <button id="certificate-button" class="certificateBtn" disabled onclick="showCertificate()">
+     Certificate</button></a>
+      </div>
+       </section>
+       <script src="script.js"></script>
+</body>
+</html>

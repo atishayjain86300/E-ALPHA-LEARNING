@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+    <!-- cc Quiz Section -->
+    <section id="ccQuiz-section" class="hidden">
+        <div class="quiz-container">
+            <h1 style="background-color:#8EACCD ; text-align: center;">Quiz</h1>
+
+            <div id="quiz">
+                <div id="userInfo">
+                <p>Name : <input type="text"></p>
+               <p>Mobile No. : <input type="number"></p>
+               <p>Gmail : <input type="email"></p>
+               </div>
+              <p>1.What is C++?</p>
+              <input type="radio" name="q1" value="1"> C++ supports both procedural and object oriented programming language<br>
+              <input type="radio" name="q1" value="0"> C++ is a functional programming language <br>
+              <input type="radio" name="q1" value="0"> C++ is an object oriented programming language<br>
+              <input type="radio" name="q1" value="0">C++ is a procedural programming language<br><br>
+    
+              <p>2. Which of the following is the correct syntax for declaring the array?</p>
+              <input type="radio" name="q2" value="0"> init array []<br>
+              <input type="radio" name="q2" value="0">int array [5];<br>
+              <input type="radio" name="q2" value="0"> 
+              Array[5];<br>
+              <input type="radio" name="q2" value="1"> Both A and B<br><br>
+    
+              <p>3. Which of the following is the correct syntax to print the message in C++ language?</p>
+              <input type="radio" name="q3" value="1">cout <<"Hello world!";<br>
+              <input type="radio" name="q3" value="0">Cout << Hello world! ;<br>
+              <input type="radio" name="q3" value="0"> Out <<"Hello world!;<br>
+              <input type="radio" name="q3" value="0">  None of the above<br>
+              <br>
+    
+              <p>4. Which of the following is the address operator? </p>
+              <input type="radio" name="q4" value="0">@<br>
+              <input type="radio" name="q4" value="0"> #<br>
+              <input type="radio" name="q4" value="1"> &<br>
+              <input type="radio" name="q4" value="0">  
+              %<br>
+              <br>
+    
+              <p>5. Which of the following features must be supported by any programming language to become a pure object-oriented programming language?</p>
+              <input type="radio" name="q5" value="0"> Inheritance<br>
+              <input type="radio" name="q5" value="0"> Polymorphism<br>
+              <input type="radio" name="q5" value="0"> 
+              Encapsulation<br>
+              <input type="radio" name="q5" value="1">   
+              All of the above<br>
+              <br>
+    
+              <p>6.The programming language that has the ability to create new data types is called_.</p>
+              <input type="radio" name="q6" value="0"> Overloaded<br>
+              <input type="radio" name="q6" value="1"> 
+              Extensible
+              <br>
+              <input type="radio" name="q6" value="0"> Reprehensible<br>
+              <input type="radio" name="q6" value="0">
+              Encapsulated<br>
+              <br>
+    
+              <p>7. Which of the following is the correct syntax to read the single character to console in the C++ language?</p>
+              <input type="radio" name="q7" value="0"> Read ch()<br>
+              <input type="radio" name="q7" value="0">Getline vh()<br>
+              <input type="radio" name="q7" value="1">
+              get(ch)<br>
+              <input type="radio" name="q7" value="0">Scanf(ch)<br>
+              <br>
+    
+              <p>8. Which of the following statements is correct about the formal parameters in C++?</p>
+              <input type="radio" name="q8" value="1"> Parameters with which functions are called<br>
+              <input type="radio" name="q8" value="0">
+              Parameters which are used in the definition of the function<br>
+              <input type="radio" name="q8" value="0"> Variables that are never used in the function<br>
+              <input type="radio" name="q8" value="0"> Variables other than passed parameters in a function<br>
+              <br>
+    
+              <p>9.  Which of the following refers to characteristics of an array?</p>
+              <input type="radio" name="q9" value="0">An array is a set of distinct data items<br>
+              <input type="radio" name="q9" value="1"> An array is a set of similar data items<br>
+              <input type="radio" name="q9" value="0"> An array can hold different types of datatypes.<br>
+              <input type="radio" name="q9" value="0">None of the above<br>
+              <br>
+    
+              <p>10.  If we stored five elements or data items in an array, what will be the index address or the index number of the array's last data item?</p>
+              <input type="radio" name="q10" value="0"> 88<br>
+              <input type="radio" name="q10" value="0">4<br>
+              <input type="radio" name="q10" value="0"> 3<br>
+              <input type="radio" name="q10" value="1">5<br>
+              <br>
+          </div>
+          <button type="button" class="submitBtn"onclick="calculateScore()">Submit</button>
+        </form>
+        <p id="result"></p>
+        <a href="certificate.jpg">
+        <button id="certificate-button" class="certificateBtn" disabled onclick="showCertificate()">
+         Certificate</button></a>
+      </div>
+       </section>
+       <script src="script.js"></script>
+</body>
+</html>
